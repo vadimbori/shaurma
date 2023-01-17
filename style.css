@@ -1,0 +1,636 @@
+body{
+	background-color: #151619;
+	font-family: 'IBM Plex Mono', monospace;
+font-family: 'Overpass', sans-serif;
+}
+.header{
+	background-color: #1c1d21;
+	color: white;
+	height: 110px;
+}
+.container{
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.nav-top{
+	padding-top: 10px;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.nav-top_1{
+	column-gap: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+.nav-top_2{
+	column-gap: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo-img{
+	height: 40px;
+}
+.basket-button{
+	margin-top:14px;
+}
+ .button-nav{
+
+ }
+ .button-nav:hover, .button-nav:focus {
+
+  border-radius: 30px;
+    background-color: #26272a;
+}
+.position{
+		display: flex;
+	justify-content: center;
+	justify-content: space-around;
+	background-color: #151619;
+	border-radius: 30px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-size: contain;
+}
+.position-menu{
+	color: white;
+	font-size: 20px;
+}
+.menu{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 25px;
+
+}
+.menu-header{
+	display: flex;
+	color: white;
+	font-size: 30px;
+	justify-content: center;
+
+		column-gap: 10px;
+
+}
+.hr-menu1{
+	height: 2px;
+	width: 50px;
+	background-color: #f25924;
+	margin-top: 15px;
+	border-radius: 10px;
+}
+.hr-menu2{
+	height: 2px;
+	width: 2000px;
+	background-color: #f25924;
+	margin-top: 15px;
+	border-radius: 10px;
+}
+.menu-position{
+	margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 30px;
+}
+.card{
+		margin-bottom: 10px;
+	color: white;
+	font-size: 20px;
+	height: 405px;
+	width: 300px;
+	word-wrap: break-word;
+	overflow:hidden;
+	background-color: #26272a;
+	border-radius: 20px;
+}
+.card-img{
+	overflow:hidden;
+	height: 60%;
+}
+.card-information{
+	overflow:hidden;
+	height: 25%;
+}
+.card-price{
+	overflow:hidden;
+	height: 10%;
+}
+.card-information_balance{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.card-text{
+	display: flex;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.img-card{
+height: 100%;
+width: 100%;
+background-size: cover;
+}
+.card-text__ing{
+	color:gray;
+	font-size:12px;
+
+}
+.card-price_balance{
+	margin-top: 10px;
+	display: flex;
+	column-gap: 140px;
+	align-items: center;
+	margin-left: 10px;
+}
+.button-buy{
+	background-color: #ff4200;
+	border-radius: 20px;
+	padding: 3px;
+	font-weight: 300;
+}
+.button-pay{
+	background-color: #ff4200;
+	border-radius: 20px;
+	padding: 3px;
+	font-weight: 300;
+}
+.button-pay:active {
+  background-color: #ff9000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.span{
+	color:red;
+}
+.button-buy:hover {background-color: #ff4200}
+
+.modal-g{
+	display: block;
+}
+.cg{
+	    padding-left: 20px;
+}
+.button-buy:active {
+  background-color: #ff9000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.modal-basket_new{
+	display: flex;
+	width:100%;
+	    font-size: 18px;
+}
+.modal-basket_void1{
+	    width: 25%;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.modal-basket_name1{
+	padding-left: 5px;
+    width: 25%;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.modal-basket_price1{
+	    width: 25%;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.modal-basket_col1{
+	width: 25%;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.header-text{
+		display: flex;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .menu {
+  padding-top: 100px;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    display: block;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: darkred;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    
+    background-color: #151619;
+    color: #919191;
+
+}
+.modal-basket{
+	font-size: 20px;
+	display: flex;
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+
+}
+.modal_basket-text{;
+		width: 100px;
+
+}
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+
+.img_basket{
+	width: 100px;
+	height: 100%;
+}
+.card_basket-2{
+	width: 100%;
+	margin-top: 50px;
+		display: flex;
+		justify-content: space-evenly;
+}
+.moda-P{
+	background-color: #151619;
+	height: 2px;
+}
+.modal-price{
+	font-size: 25px;
+	color: ghostwhite;
+	background-color: #1c1d21;
+	padding-top: 10px;
+}
+.pricce-text{
+	text-align: center;
+}
+.modal-price2{
+	padding-left: 10px;
+	margin-top: 10px;
+	font-weight: 400;
+	color: gray;
+	font-size: 20px;
+	display: flex;
+	gap: 5px;
+}
+.modal-price-text{
+	color: #ff4200;
+}
+.counter_basket{
+	margin-top: 15px;
+	height: 30px;
+	overflow:hidden;
+	display: flex;
+
+	color: white;
+	font-weight: 300;
+	font-size: 25px;
+	width: 140px;
+}
+.counter_basket-name{
+	display: flex;
+	justify-content: center;
+	font-size: 20px;
+		padding-top: 3px;
+	overflow:hidden;
+		}
+		.modal-void{
+			background-color: #1c1d21;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
+.counter_basket-control{
+		padding-top: 3px;
+	padding-bottom: 1px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.counter_basket-control:hover, .counter_basket-control:focus{
+	background-color: #5f6061;
+
+}
+.none{
+	display: none;
+}
+
+.modal-content-1{
+	max-height: 300px;
+overflow: auto;
+}
+
+.card_basket{
+	height: 100px;
+	display: flex;
+	margin-bottom: 10px;
+}
+.modal-content-1{
+background-color: #151619;
+}
+
+.card_basket-img{
+	width: 25%;
+		word-wrap: break-word;
+	overflow:hidden;
+}
+.img-bask{
+	width: 100%;
+	height: 100%;
+}
+.card_basket-name{
+	padding-left: 5px;
+		width: 25%;
+		word-wrap: break-word;
+	overflow:hidden;
+}
+.card_basket-text{
+	color: white;
+	font-size: 18px;
+}
+.card_basket-price{
+			width: 25%;
+		word-wrap: break-word;
+	overflow:hidden;
+}
+.card_basket-counter{
+				width: 25%;
+		word-wrap: break-word;
+	overflow:hidden;
+}
+
+.card_basket-img-cintainer{
+	margin-left: 50%;
+			word-wrap: break-word;
+	overflow:hidden;
+}
+
+
+
+@media screen  and (max-width:787px) {
+	.container{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+	.card{
+		margin-bottom: 10px;
+	color: white;
+	font-size: 20px;
+	height: 250px;
+	width: 150px;
+	word-wrap: break-word;
+	overflow:hidden;
+	background-color: #26272a;
+	border-radius: 20px;
+}
+.card_basket-text{
+	font-size:12px;
+}
+.button-pay{
+	background-color: #ff4200;
+	border-radius: 20px;
+	padding: 3px;
+	font-weight: 300;
+	font-size: 15px;
+}
+.counter_basket-control{
+font-size:12px;
+}
+.counter_basket-name{
+	font-size:12px;
+}
+.modal-basket_new{
+	font-size:12px;
+}
+
+.card-img{
+	overflow:hidden;
+	height: 60%;
+}
+.card-information{
+	overflow:hidden;
+	height: 25%;
+}
+.card-price{
+	overflow:hidden;
+	height: 15%;
+}
+.card-information_balance{
+	margin-top: 5px;
+	margin-left: 2px;
+}
+.card-text{
+	font-size: 12px;
+	display: flex;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.img-card{
+height: 100%;
+width: 100%;
+background-size: cover;
+}
+.card-text__ing{
+	color:gray;
+	font-size:8px;
+
+}
+.card-price_balance{
+	margin-top: 10px;
+	display: flex;
+	column-gap: 65px;
+	align-items: center;
+	margin-left: 2px;
+}
+.button-buy{
+	font-size: 10px;
+	background-color: #ff4200;
+	border-radius: 20px;
+	padding: 3px;
+	font-weight: 300;
+}
+.card-text__name{
+	font-size: 10px;
+}
+.header-text{
+	font-size: 20px;
+		display: flex;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.hr-menu1{
+	height: 2px;
+	width: 50px;
+	background-color: #f25924;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+.hr-menu2{
+	height: 2px;
+	width: 2000px;
+	background-color: #f25924;
+	margin-top: 10px;
+	border-radius: 10px;
+}
+.nav-top{
+	padding-top: 10px;
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.nav-top_1{
+	column-gap: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.nav-top_2{
+	gap: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo-img{
+	height: 40px;
+}
+.basket-button{
+	margin-top:14px;
+}
+ .button-nav{
+ 	font-size: 10px;
+ }
+ .button-nav:hover, .button-nav:focus {
+
+  border-radius: 30px;
+    background-color: #26272a;
+}
+.position{
+		display: flex;
+	justify-content: center;
+	justify-content: space-around;
+	background-color: #151619;
+	border-radius: 30px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-size: contain;
+}
+.position-menu{
+	color: white;
+	font-size: 12px;
+}
+.header{
+	background-color: #1c1d21;
+	color: white;
+	height: 80px;
+}
+.logo-img{
+	margin-top: 4px;
+	height: 20px;
+}
+.geo-img{
+	height: 15px;
+}
+.number-img{
+	height: 15px;
+}
+.basket-button{
+	height: 15px;
+	margin-top:8px;
+}
+.menu{
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 25px;
+
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .menu {
+  padding-top: 80px;
+}
+}
+
+@media screen  and (max-width:407px) {
+.counter_basket-control {
+    padding-top: 3px;
+    padding-bottom: 1px;
+    padding-right: 17px;
+    padding-left: 17px;
+}
+.cg{
+	    padding-left: 17px;
+}
+}
